@@ -37,28 +37,29 @@ String.prototype.toHHMMSS = function () {
 }
 
 
-function LineGraph() {
-  var [body, setBody] = useState([]);
-  var [count, setCount] = useState(0);
-  var time = new Date();
-  useEffect(() => {
-    // body.push({score:Math.random()*10, time:time.toString()}); 
-    const interval = setInterval(() => {
-      time = new Date();
-      body.push({score:Math.random()*10, time:time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds()});
-      count += 1;  
-      setBody(body);
-      setCount(count); 
-      if (body.length > 40){
-        body.shift(); 
-      }
-    }, 1000);
+function LineGraph(props) {
+  // var [body, setBody] = useState([]);
+  // var [count, setCount] = useState(0);
+  // var time = new Date();
+  // useEffect(() => {
+  //   // body.push({score:Math.random()*10, time:time.toString()}); 
+  //   const interval = setInterval(() => {
+  //     time = new Date();
+  //     body.push({score:Math.random()*10, time:time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds()});
+  //     count += 1;  
+  //     setBody(body);
+  //     setCount(count); 
+  //     if (body.length > 40){
+  //       body.shift(); 
+  //     }
+  //     fetch("http://127.0.0.1:5000").then(response => response.json()).then(data => console.log(data)); 
+  //   }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
 
-  console.log(body); 
+  // console.log(body); 
   const data = [{msg: "Dunk", time: "8:00"},{msg: "Turnover", time: "8:02"}, {msg: "LeBum sat out", time: "8:05"}]; 
 
   return (
@@ -67,12 +68,12 @@ function LineGraph() {
         <Line
           data={{
             // x-axis label values
-            labels: body.map((value) =>value.time),
+            labels: props.data.map((value) =>value.time),
             datasets: [
               {
                 label: "ElongatedSocialMetric",
                 // y-axis data plotting values
-                data: body.map((value) =>value.score),
+                data: props.data.map((value) =>value.score),
                 fill: true,
                 borderWidth: 4,
                 backgroundColor: "rgb(0, 43, 92)",
@@ -86,7 +87,7 @@ function LineGraph() {
       </div>
 
       <div style={{ width: "42%", margin: "1%", padding: "1%", display: 'flex', float: 'right', outline: '#B8C4CA solid 5px', backgroundColor: "white"}}>
-        <PlayList data={data} title={"Game Play Feed"} textAlign="center"></PlayList>
+        <PlayList data={props.data} title={"Game Play Feed"} textAlign="center" generated={false}></PlayList>
       </div>
     </div>
   );

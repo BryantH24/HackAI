@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 
 
 function PlayList(props) {
-    console.log(props);  
+    // console.log(props);  
     return (
         <Grid item xs={1} md={1}>
             <Typography sx={{ mt: 1, mb: 1 }} variant="h6" component="div" textAlign='center'>
@@ -23,7 +23,7 @@ function PlayList(props) {
                     return (
                         <ListItem>
                             <ListItemText
-                                primary={play.msg}
+                                primary={(props.generated) ? play.generated: play.msg}
                                 secondary={play.time}
                             />
                         </ListItem>)

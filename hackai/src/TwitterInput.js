@@ -13,7 +13,7 @@ return (
           label="Multiline"
           multiline
           rows={9}
-          defaultValue="LeBron...more like LeBum LOL!"
+          defaultValue=""
           style={{width: '130%'}}
         />
       <Button variant="contained" style={{margin: "8%", marginLeft:"30%"}}>Send Tweet</Button>

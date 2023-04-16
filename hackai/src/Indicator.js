@@ -15,7 +15,7 @@ const bull = (
   </Box>
 );
 
-export default function Indicator() {
+export default function Indicator(props) {
   return (
     <Card sx={{ minWidth: 100 }}>
       <CardContent>
@@ -23,7 +23,7 @@ export default function Indicator() {
           Current ELS
         </Typography>
         <Typography variant="h2" component="div">
-          9.1
+          {props.data[props.data.length-1].score}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
           0 - 4: Low Predicted Engagement
