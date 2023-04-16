@@ -35,7 +35,7 @@ export default function Header() {
   
           <Typography variant="h6" 
             component="div" sx={{ flexGrow: 1 }}>
-            Dallas Mavericks ElongatedSocialMetric
+            Dallas Mavericks SMM
           </Typography>
           <Button color="inherit">Refresh</Button>
         </Toolbar>

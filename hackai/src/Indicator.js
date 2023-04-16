@@ -20,7 +20,7 @@ export default function Indicator(props) {
     <Card sx={{ minWidth: 100 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Current ELS
+          Current SMM
         </Typography>
         <Typography variant="h2" component="div">
           {props.data[props.data.length-1].score}

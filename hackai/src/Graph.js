@@ -71,7 +71,7 @@ function LineGraph(props) {
             labels: props.data.map((value) =>value.time),
             datasets: [
               {
-                label: "ElongatedSocialMetric",
+                label: "Mavs SMM",
                 // y-axis data plotting values
                 data: props.data.map((value) =>value.score),
                 fill: true,

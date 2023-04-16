@@ -32,8 +32,9 @@ function App() {
         console.log(body)
       }
       );
+      console.log(count); 
 
-    }, 1000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
