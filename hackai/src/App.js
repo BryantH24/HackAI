@@ -55,7 +55,7 @@ function App() {
       </div>
 
       <div style={{ width: "42%", margin: "1%", padding: "1%", display: 'flex', float: 'right', outline: '#B8C4CA solid 5px', backgroundColor: "white" }}>
-        <PlayList data={body} title={"Generated Tweets"} generated={true}>
+        <PlayList data={body} title={"Generated Tweets, powered by Respell"} generated={true}>
         </PlayList>
       </div>
       {/* <hr style={{ width: "30%", margin: "1%"}}></hr> */}
