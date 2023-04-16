@@ -10,12 +10,9 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 data = [
         {"msg": "Jump Ball Powell vs Zeller (Bullock gains possession)", "score":6, "time": "4:01:12"}, 
-        {"msg": "[DAL 2-0] Powell Alley Oop Layup shot: Made (2 PTS) Assist: Doncic (1 AST)", "score":4, "time": "4:01:57"}, 
-        {"msg": "[MIA] Vincent Driving Floating Jump Shot: Missed", "score":2, "time": "4:02:01"}, 
-        {"msg": "[DAL] Irving Alley Oop to Doncic Dunk", "score":9, "time": "4:02:15"}, 
-        # {"msg": "Michael Jordan with the game winner", "generated": "really awesome shot!", "score":5, "time": 123},
-        # {"msg": "Elvis Presley with the game winner", "generated": "really awesome shot!", "score":5, "time": 123},
-        # {"msg": "Thomas Jefferson with the game winner", "generated": "really awesome shot!", "score":9, "time": 123}  
+        {"msg": "[DAL 2-0] Powell Alley Oop Layup shot: Made (2 PTS) Assist: Doncic (1 AST)", "score":5, "time": "4:01:57"}, 
+        {"msg": "[DAL] Dinwiddie Driving Floating Jump Shot: Missed", "score":2, "time": "4:02:01"}, 
+        # {"msg": "[DAL] Irving Alley Oop to Doncic Dunk", "score":9, "time": "4:02:15"}, 
         ]
 
 
